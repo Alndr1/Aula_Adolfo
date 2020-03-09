@@ -1,0 +1,30 @@
+import javax.swing.JOptionPane;
+
+public class Aula2_Adolfo
+{
+    public static void main (String[] args){
+        double nota_01, nota_02, nota_03, media;
+        
+        String aluno = JOptionPane.showInputDialog ("Insira o nome do aluno:");
+        
+        nota_01 = Double.parseDouble (JOptionPane.showInputDialog("Insira a primeira nota: "));
+        
+        nota_02 = Double.parseDouble (JOptionPane.showInputDialog("Insira a segunda nota: "));
+        
+        nota_03 = Double.parseDouble (JOptionPane.showInputDialog("Insira a terceira nota: "));
+        
+        media = (nota_01+nota_02+nota_03)/3;
+        
+        double nota_reprovado = 5.0;
+        
+        double nota_recuperacao = 7.0;
+        
+        if(media >=7.0){
+            JOptionPane.showMessageDialog (null,"O aluno está aprovado");
+        }else if (media >= 5.0) {
+            JOptionPane.showMessageDialog (null,"O aluno está de recuperação");
+        }else{
+            JOptionPane.showMessageDialog (null,"O aluno está reprovado");
+        }
+    }
+}
